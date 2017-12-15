@@ -11,38 +11,38 @@ from gtts import gTTS
 import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,os,subprocess,requests,tempfile
 
 cl = LINETCR.LINE()
-#cl.login(qr=True)
-cl.login(token='EnalxH5ZTQDhSNCLXqo9.MZVmTCezSz3E1MCu45V3gq.AGDF9kg1tND38SxuG1hyLQV/4vjGO7HDmazBeqtiyxE=')
+cl.login(qr=True)
+#cl.login(token='TOKEN_HERE')
 cl.loginResult()
 print "Cl-Login Success\n"
 
 ki = LINETCR.LINE()
-#ki.login(qr=True)
-ki.login(token='EnezGVYScoAIaMYWEBZf.KJsRFRfhyro25+LavRe+7W.OxOLXWdariB2qktgdCvT68B3onBjRwlnRYPbh0vf2K0=')
+ki.login(qr=True)
+#ki.login(token='TOKEN_HERE')
 ki.loginResult()
 print "Ki-Login Success\n"
 
 kk = LINETCR.LINE()
-#kk.login(qr=True)
-kk.login(token='EnOFvoKCv3W1SCt80bOd.8UsFwHu1ET7MzpDx4B7B+q.kzUBcJxIEqxJbwysi4/4twn90XzgLU/REW8LCR/WG88=')
+kk.login(qr=True)
+#kk.login(token='TOKEN_HERE')
 kk.loginResult()
 print "Kk-Login Success\n"
 
 kc = LINETCR.LINE()
-#kc.login(qr=True)
-kc.login(token='EnKmnUWiS9cG2g1owXA0.vGpdYiVRGTlFsIwEDLJ2qa.s1TkiN70Amaf/pHk3VWZ5N1jk/VRWoL+zI5tvHnqLwA=')
+kc.login(qr=True)
+#kc.login(token='TOKEN_HERE')
 kc.loginResult()
 print "Kc-Login Success\n"
 
 kr = LINETCR.LINE()
-kr.login(qr=True)#
-kr.login(token='EnEjFHaKUPnO5YtDvGQf.s80w/7dVqXaeh8CjRl4+7W.5wTqV0Aj4psdAgZEA5kNz051gGG0bOGAZgTw8pAcWOA=')
+kr.login(qr=True)
+#kr.login(token='TOKEN_HERE')
 kr.loginResult()
 print "Kr-Login Success\n"
 
 km = LINETCR.LINE()
-#km.login(qr=True)
-km.login(token='EnejWyXUrmccPbwdgYK9.505FRwbH9SdX9bJhwBbpIq.4VMt3iaOSK0x8kAhok1Nh1X8gZEPThqyyp2H5TdWyiA=')
+km.login(qr=True)
+#km.login(token='TOKEN_HERE')
 km.loginResult()
 print "Km-Login Success\n\n=====[Sukses All Login]====="
 
