@@ -11,8 +11,8 @@ from gtts import gTTS
 import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,os,subprocess,requests,tempfile
 
 cl = LINETCR.LINE()
-#cl.login(qr=True)
-cl.login(token='EnxoWFkyStAgWuCx9EBb.fpzoe5O4f6/QVIFsn6/ZAW.ky+9PzaR66IkOZa1dR+YNhmno0w1HMoU9Xy+cKWTPzQ=')
+cl.login(qr=True)
+#cl.login(token='TOKEN_HERE')
 cl.loginResult()
 print "Cl-Login Success\n\n=====[Sukses Login]====="
 
