@@ -19,28 +19,28 @@ cl.login(token="Eoudy8qUZCzBMi9HwIRc.eoXp0xK1vqkdnL9Q78yCpa.IcyNCrZW9inSMqlyR05B
 cl.loginResult()
 
 ki = LINETCR.LINE()
-ki.login(token="EoyIFrTXPFrnDTAVpKif.vVPISdEKRjCwFNpzI3k+RW.Y+vxRzYOZLALvGHauwwea+GdXjt5UNEV+cw4Dln1fVE=")
+ki.login(token="EoAcTdUbALSUVM5pQRwf.vVPISdEKRjCwFNpzI3k+RW.KaTYRyHBNeJ73lJuuu0DarZ0s2vZt+8yUgU5YO0aXCg=")
 ki.loginResult()
 
 kk = LINETCR.LINE()
-kk.login(token="Eo2E0qjqCNEFOjz51o72.h6ACMEcQmlMxE/DJN7DS0G.UK3gtCPmzI1NO8krDZbgubPbD0s02NVqpvN4zLN1gbA=")
+kk.login(token="EovzjaTatTCkv6m4Nia2.h6ACMEcQmlMxE/DJN7DS0G.VMNqraTtdu3QvsnVR3NOw4bew1B7CKklikLum+chpSY=")
 kk.loginResult()
 
 ke = LINETCR.LINE()
-ke.login(token="EoOs2UP9m0fSBz4R0BMa.nKWTtdkTR1t0s6tTguGLAG.SE0Pz3QGuwAHeSb0RypyDnFHDg1g0tBkLk9TYPPg7nA=")
+ke.login(token="Eo6k8Z9N8BbCLKi0Wyuf.ySK6/7lzzXJWVTkhLlNW+W.GJzEUxQCO1QTgLiZg2xkSYQFznrEdVIViWmWc+/grJw=")
 ke.loginResult()
 
 ka = LINETCR.LINE()
-ka.login(token="Eoa27q2m1eOPLQswz2Lf.ySK6/7lzzXJWVTkhLlNW+W.vqIRAfhukcZ9WPhs/XXkfyeB0FqKhh1n3p1YTCfCgfM=")
+ka.login(token="EooS6p4HR9R8MR2fW1ca.nKWTtdkTR1t0s6tTguGLAG.j2goFGqf/74PeGdizcTgNuY89qcxdGFLQApMDVBA5YE=")
 ka.loginResult()
 
 cl
 
 ko = ki
 
-kb = ku = kk
+ku = kk
 
-kc = kb
+kc = kb = ke
 
 ks = ka
 print "login success"
@@ -731,12 +731,6 @@ def sendText(self, Tomid, text):
         msg = Message()
         msg.to = Tomid
         msg.text = text
-
-def sendMessage(self, messageObject):
-        return self.Talk.client.sendMessage(0,messageObject)
-
-def post_content(self, urls, data=None, files=None):
-        return self._session.post(urls, headers=self._headers, data=data, files=files)
 def sendMessage(to, text, contentMetadata={}, contentType=0):
     mes = Message()
     mes.to, mes.from_ = to, profile.mid
@@ -3215,7 +3209,7 @@ def bot(op):
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Already。")
             elif msg.text in ["Media:on"]:
-              if msg.from_ in admin:
+              if msg.from_ in creator:
                 if wait["media"] == True:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Done。")
@@ -3224,7 +3218,7 @@ def bot(op):
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Already。")
             elif msg.text in ["Media:off"]:
-              if msg.from_ in admin:
+              if msg.from_ in creator:
                 if wait["media"] == False:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Done。")
@@ -3645,15 +3639,18 @@ def bot(op):
                         cl.updateGroup(G)
                         invsend = 0
                         Ticket = cl.reissueGroupTicket(msg.to)
-                        kc.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        ki.acceptGroupInvitationByTicket(msg.to,Ticket)
                         time.sleep(0.2)
-			kc.sendText(msg.to,"hadir sayang")
-                        ka.acceptGroupInvitationByTicket(msg.to,Ticket)
+			ki.sendText(msg.to,"hadir sayang")
+                        kk.acceptGroupInvitationByTicket(msg.to,Ticket)
                         time.sleep(0.2)
-			ka.sendText(msg.to,"aku juga sayang")
-                        ks.acceptGroupInvitationByTicket(msg.to,Ticket)
+			kk.sendText(msg.to,"aku juga sayang")
+                        kb.acceptGroupInvitationByTicket(msg.to,Ticket)
                         time.sleep(0.2)
-                        ks.sendText(msg.to,"aku disini yang")
+                        kb.sendText(msg.to,"aku disini yang")
+                        kb.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        time.sleep(0.2)
+			ka.sendText(msg.to,"ada apa sayang")
                         G = cl.getGroup(msg.to)
                         G.preventJoinByTicket = True
                         cl.updateGroup(G)
@@ -4403,12 +4400,14 @@ def bot(op):
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
-			kc.sendText(msg.to,"see you yang")
-                        kc.leaveGroup(msg.to)
-			ka.sendText(msg.to,"makasih sayang")
+			ki.sendText(msg.to,"see you yang")
+                        ki.leaveGroup(msg.to)
+			kk.sendText(msg.to,"makasih sayang")
+                        kk.leaveGroup(msg.to)
+			ke.sendText(msg.to,"dadah bebih")
+                        ke.leaveGroup(msg.to)
+			ka.sendText(msg.to,"mblaem")
                         ka.leaveGroup(msg.to)
-			ks.sendText(msg.to,"dadah bebih")
-                        ks.leaveGroup(msg.to)
                     except:
                         pass
             elif msg.text in ["Bye _Second"]:
